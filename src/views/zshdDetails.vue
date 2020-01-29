@@ -13,14 +13,14 @@
             <ul class="xdzs-media-box__info">
                 <li class="xdzs-media-box__info__meta">{{fbdw}}</li>
                 <li class="xdzs-media-box__info__meta">{{fbsj}}</li>
-                <li class="xdzs-media-box__info__meta_extra">{{fujian}}</li>
+<!--                <li class="xdzs-media-box__info__meta_extra">{{fujian}}</li>-->
             </ul>
         </div>
-        <van-divider :style="{ padding: '0 16px',margin:'10px 0px' }">附件信息</van-divider>
+        <van-divider content-position="left" :style="{ color: '#989898', borderColor: '#989898',padding: '0 16px',margin:'10px 0px' }">附件信息</van-divider>
         <img v-for="img in imageList" v-lazy="img" width="100px" style="margin:0px 5px 5px" @click='showImagePreview(imageList.indexOf(img))'>
-        <van-divider :style="{ padding: '0 16px',margin:'10px 0px' }">参加人员</van-divider>
+        <van-divider content-position="left" :style="{ color: '#989898', borderColor: '#989898',padding: '0 16px',margin:'10px 0px' }">参加人员</van-divider>
         <img v-for="cjavator in imageListavator" v-lazy="cjavator" width="40px" style="margin:0px 5px;border-radius:50%">
-        <van-divider :style="{ padding: '0 16px',margin:'10px 0px' }">活动支线</van-divider>
+        <van-divider content-position="left" :style="{ color: '#989898', borderColor: '#989898',padding: '0 16px',margin:'10px 0px' }">活动支线</van-divider>
         <van-steps direction="vertical" :active='-1' >
             <van-step>
                 <h3>【西安市】西安市高新一中校内西安市高新一中校内西安市高新一中校内(120人)</h3>
@@ -61,7 +61,7 @@
                 fbsj:"03-20",
                 joinnum:'2',
                 allnum:'3',
-                fujian:'附件(3)',
+                // fujian:'附件(3)',
                 imageList: [
                     'https://img.yzcdn.cn/vant/apple-1.jpg',
                     'https://img.yzcdn.cn/vant/apple-2.jpg'
@@ -198,7 +198,7 @@
     .xdzs-media-box__info__meta{
         float:left;
         padding-right:10px;
-        /*max-width: 200px;*/
+        max-width: 200px;
     }
     .xdzs-media-box__info__meta_extra{
         float:left;

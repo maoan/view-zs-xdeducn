@@ -156,7 +156,7 @@
 
     .xdzs-media-box__info {
         margin-top: 16px;
-        padding-bottom: 8px;
+        padding-bottom: 4px;
         font-size: 13px;
         color: #CECECE;
         line-height: 1em;
