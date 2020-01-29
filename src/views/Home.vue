@@ -24,9 +24,7 @@
       <div class="home-nav__block">
         <router-link to="/teaMain">教师主页</router-link>
       </div>
-      <div class="home-nav__block">
-        <router-link to="/stuinfoList">考生信息管理</router-link>
-      </div>
+
     </div>
   </div>
 
