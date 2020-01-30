@@ -21,7 +21,7 @@
             <van-field v-model="szbj" label="所在班级" type="digit" placeholder="输入班级号 如12班 输入12即可" clearable/>
         </van-cell-group>
         <van-collapse v-model="activeSexkl" style="margin-top: 10px" accordion>
-            <van-collapse-item title="性别" :value=radioSex :name="collapsename">
+            <van-collapse-item title="性别" :value="radioSex" :name="collapsename">
                 <van-radio-group v-model="radioSex">
 
                     <van-cell title="男" clickable @click="radioSex = '男',collapsename='4'">

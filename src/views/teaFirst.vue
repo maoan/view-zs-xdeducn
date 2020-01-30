@@ -24,14 +24,14 @@
 
         </van-cell-group>
         <van-collapse v-model="activeSexkl" style="margin-top: 10px">
-            <van-collapse-item title="性别" name="1">
+            <van-collapse-item title="性别" :value="radioSex" :name="collapsename">
                 <van-radio-group v-model="radioSex">
 
-                    <van-cell title="男" clickable @click="radioSex = '1'">
-                        <van-radio slot="right-icon" name="1" />
+                    <van-cell title="男" clickable @click="radioSex = '男',collapsename>10?collapsename=1:collapsename++">
+                        <van-radio slot="right-icon" name="男"/>
                     </van-cell>
-                    <van-cell title="女" clickable @click="radioSex = '2'">
-                        <van-radio slot="right-icon" checked-color="red" name="2" />
+                    <van-cell title="女" clickable @click="radioSex = '女',collapsename++">
+                        <van-radio slot="right-icon" checked-color="red" name="女"/>
                     </van-cell>
 
                 </van-radio-group>
@@ -111,8 +111,8 @@
         data() {
             return {
                 name: '',
-
-                radioSex: '1',
+                collapsename:1,
+                radioSex:'',
 
                 activeSexkl: [''],
                 gzh: '',
