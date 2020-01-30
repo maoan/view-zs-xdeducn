@@ -198,9 +198,10 @@
 
 <style type="text/css">
     .szzs-row {
-        height: 100px;
+        /*height: 110px;*/
         margin-top: 10px;
-        background-color: white
+        background-color: white;
+        /*padding-bottom: 8px;*/
     }
 
     .szzs-col {
