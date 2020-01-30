@@ -1,10 +1,14 @@
 <template>
-    <div class="xdzs-panel">
+    <div class="xdzs-panel" @click="onpushhdxq">
         <van-row justify="space-around" type="flex">
-            <van-col class="xdzs-panel__hd van-ellipsis" span="16">{{hdlx}}</van-col>
+            <van-col class="xdzs-panel__hd van-ellipsis" span="14">{{hdlx}}</van-col>
             <van-col class="xdzs-panel__hd" span="8" style="text-align: right">
-                <div>人数(<span v-model="joinnum">{{joinnum}}</span>/<span v-model="allnum">{{allnum}}</span>)</div>
+                <div>人数(<span v-model="joinnum">{{joinnum}}</span>/<span v-model="allnum">{{allnum}}</span>)
+
+                </div>
+
             </van-col>
+            <van-col><van-icon name="arrow" size="12px" color="#989898" style="padding: 13px 10px 0px 0px" /></van-col>
         </van-row>
 
         <div class="xdzs-media-box">
@@ -13,14 +17,14 @@
             <ul class="xdzs-media-box__info">
                 <li class="xdzs-media-box__info__meta van-ellipsis">{{fbdw}}</li>
                 <li class="xdzs-media-box__info__meta">{{fbsj}}</li>
-                <li class="xdzs-media-box__info__meta_extra">
-                    <a @click="onpushhdxq"
-                       href="javascript:void(0)">查看详情</a>
-                    <a @click="onpushhdzj"
-                       href="javascript:void(0)"
-                       style="margin-left: 20px"
-                       v-if="hdzjable"
-                    >活动总结</a>
+                <li class="xdzs-media-box__info__meta_extra">{{hdfj}}<span style="padding-left: 15px">{{hdfz}}</span>
+<!--                    <a @click="onpushhdxq"-->
+<!--                       href="javascript:void(0)">查看详情</a>-->
+<!--                    <a @click="onpushhdzj"-->
+<!--                       href="javascript:void(0)"-->
+<!--                       style="margin-left: 20px"-->
+<!--                       v-if="hdzjable"-->
+<!--                    >活动总结</a>-->
                 </li>
 
 
@@ -41,7 +45,9 @@
             fbsj: String,
             joinnum: String,
             allnum: String,
-            hdzjable: Boolean
+            hdfj:String,
+            hdfz:String
+            // hdzjable: Boolean
         },
         methods: {
             onpushhdxq() {
@@ -97,7 +103,7 @@
     }
 
     .xdzs-panel__hd {
-        padding: 10px 16px 10px;
+        padding: 10px 0px 10px 16px;
         color: #989898;
         font-size: 12px;
         font-weight: 500;
@@ -155,13 +161,13 @@
     }
 
     .xdzs-media-box__info {
-        margin-top: 16px;
-        padding-bottom: 4px;
+        margin-top: 10px;
+        padding-bottom: 8px;
         font-size: 13px;
-        color: #CECECE;
-        line-height: 1em;
-        list-style: none;
-        overflow: hidden;
+        color: #989898;
+        line-height: 1.2em;
+        /*list-style: none;*/
+        /*overflow: hidden;*/
     }
 
     .xdzs-media-box__info__meta {
@@ -173,7 +179,7 @@
     .xdzs-media-box__info__meta_extra {
         float: left;
         /*padding-right:8px;*/
-        padding-left: 5px;
+        padding-left: 8px;
         border-left: 1px solid #CECECE;
     }
 </style>

@@ -13,44 +13,50 @@
             <van-row style="padding: 10px 10px 10px 20px" type="flex">
                 <van-col span="16">
                     <van-row type="flex">
-                        <van-col style="text-align: right">
+                        <van-col style="text-align: left">
                             <div class="teaname">李小明<span class="teacher">老师</span></div>
-                            <div class="teapart">西安电子科技大学<br/>信息工程学院</div>
+                            <div class="teapart">西安电子科技大学/信息工程学院</div>
                             <div class="phoneinfo">
-                                <van-icon name="phone-o" size="18px"/>
+                                <van-icon name="phone-o" size="16px"/>
                                 <span class="phonenum">13913913919</span>
                             </div>
                         </van-col>
+
                     </van-row>
                 </van-col>
-                <van-col span="8">
-                    <img :src="teaqr" height="80px" width="80px"/>
+                <van-col span="8" style="text-align: right">
+                    <img :src="teaqr" height="65px" width="65px"/>
                 </van-col>
             </van-row>
         </van-panel>
         <van-panel desc="请在每阶段考试完成后填报以下信息" icon="column" style="margin-top: 10px" title="阶段填报信息">
             <van-field
                     clearable
+                    type="number"
                     label="模考成绩一"
                     placeholder="输入第一次模拟考试成绩"
                     v-model="mkcj1"/>
             <van-field
                     clearable
+                    type="number"
                     label="模考成绩二"
                     placeholder="输入第二次模拟考试成绩"
                     v-model="mkcj2"/>
             <van-field
                     clearable
+                    type="number"
                     label="模考成绩三"
                     placeholder="输入第三次模拟考试成绩"
                     v-model="mkcj3"/>
             <van-field
                     clearable
+                    type="number"
                     label="高考成绩"
                     placeholder="输入您的高考成绩"
                     v-model="gkcj"/>
             <van-field
                     clearable
+                    type="number"
                     label="高考排名"
                     placeholder="输入您的高考排名"
                     v-model="gkpm"/>
@@ -66,7 +72,7 @@
         components: {PageHead},
         data() {
             return {
-                userRealname: '麻花腾',
+                userRealname: '张学新',
                 userDepart: '西安市第八十二中学/高三12班',
                 teaqr: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3602624501,870193918&fm=26&gp=0.jpg',
                 mkcj1: '',
